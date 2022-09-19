@@ -1,5 +1,6 @@
 # Menu Profile
-- Praticando um poudo de view code
+- Feature de um menu profile
+- Praticando um pouco de view code
 - Mock de dados
 - Consumir API com Alamofire
 - Estrutura MVVM
