@@ -15,7 +15,6 @@ class MenuProfileVC: UIViewController {
     
     override func loadView() {
         self.screen = MenuProfileScreen()
-        self.screen?.setupDelegateTableView(delegate: self, dataSource: self)
         self.view = self.screen
     }
     
@@ -36,6 +35,8 @@ class MenuProfileVC: UIViewController {
 extension MenuProfileVC: MenuProfileViewModelDelegate {
     func success() {
         print("Tudo certo!")
+        self.screen?.setupDelegateTableView(delegate: self, dataSource: self)
+        self.screen?.tabbleView.reloadData()
     }
     
     func error(_ message: String) {
@@ -47,24 +48,33 @@ extension MenuProfileVC: MenuProfileViewModelDelegate {
 extension MenuProfileVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return self.viewModel.numberOfSection
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.viewModel.numberOfRowsInSection(section: section)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = SectionView()
         view.referenceButton.addTarget(self, action: #selector(self.tapSection(_:)), for: .touchUpInside)
         view.referenceButton.tag = section
-        view.setupSection(description: "Teste")
+        view.setupSection(description: self.viewModel.titleForSection(section: section))
+        view.expandButton(value: self.viewModel.containsSection(section))
         
         return view
     }
     
     @objc func tapSection(_ sender: UIButton) {
         print(#function)
+        let section = sender.tag
+        if self.viewModel.containsSection(section) {
+            self.viewModel.tappedSection(type: .remove, section: section)
+            self.screen?.insertRowsTableView(indexPath: self.viewModel.indexPathForSection(section), section: section)
+        } else {
+            self.viewModel.tappedSection(type: .insert, section: section)
+            self.screen?.deleteRowsTableView(indexPath: self.viewModel.indexPathForSection(section), section: section)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

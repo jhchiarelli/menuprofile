@@ -86,6 +86,19 @@ class MenuProfileScreen: UIView {
             self.tabbleView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
+
+    public func insertRowsTableView(indexPath: [IndexPath], section: Int) {
+        self.tabbleView.beginUpdates()
+        self.tabbleView.insertRows(at: indexPath, with: .fade)
+        self.tabbleView.reloadSections(IndexSet(integer: section), with: .none)
+        self.tabbleView.endUpdates()
+    }
     
+    public func deleteRowsTableView(indexPath: [IndexPath], section: Int) {
+        self.tabbleView.beginUpdates()
+        self.tabbleView.deleteRows(at: indexPath, with: .fade)
+        self.tabbleView.reloadSections(IndexSet(integer: section), with: .none)
+        self.tabbleView.endUpdates()
+    }
 
 }
