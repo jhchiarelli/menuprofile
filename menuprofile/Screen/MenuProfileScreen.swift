@@ -43,7 +43,7 @@ class MenuProfileScreen: UIView {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.backgroundColor = .white
         tv.separatorStyle = .none
-        // TODO Register
+        tv.register(MenuProfileTableViewCell.self, forCellReuseIdentifier: MenuProfileTableViewCell.identifier)
         return tv
     }()
 

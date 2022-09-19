@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D1EFD5D28D5228100A25072 /* MenuProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EFD5C28D5228100A25072 /* MenuProfileScreen.swift */; };
 		5D1EFD6028D666F300A25072 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EFD5F28D666F300A25072 /* SectionView.swift */; };
+		5D1EFD6328D8B70D00A25072 /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EFD6228D8B70D00A25072 /* MenuProfileTableViewCell.swift */; };
+		5D1EFD6628D8B7C200A25072 /* MenuProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EFD6528D8B7C200A25072 /* MenuProfileTableViewCellScreen.swift */; };
 		5D5EFA1E28D4A99800D92077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5EFA1D28D4A99800D92077 /* AppDelegate.swift */; };
 		5D5EFA2028D4A99800D92077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5EFA1F28D4A99800D92077 /* SceneDelegate.swift */; };
 		5D5EFA2228D4A99800D92077 /* MenuProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5EFA2128D4A99800D92077 /* MenuProfileVC.swift */; };
@@ -26,6 +28,8 @@
 		35F5B577D47FE8B49F3129BA /* Pods-menuprofile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menuprofile.debug.xcconfig"; path = "Target Support Files/Pods-menuprofile/Pods-menuprofile.debug.xcconfig"; sourceTree = "<group>"; };
 		5D1EFD5C28D5228100A25072 /* MenuProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileScreen.swift; sourceTree = "<group>"; };
 		5D1EFD5F28D666F300A25072 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		5D1EFD6228D8B70D00A25072 /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
+		5D1EFD6528D8B7C200A25072 /* MenuProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
 		5D5EFA1A28D4A99800D92077 /* menuprofile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = menuprofile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5EFA1D28D4A99800D92077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5EFA1F28D4A99800D92077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,23 @@
 			path = Section;
 			sourceTree = "<group>";
 		};
+		5D1EFD6128D8B6E500A25072 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5D1EFD6428D8B79D00A25072 /* Screen */,
+				5D1EFD6228D8B70D00A25072 /* MenuProfileTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5D1EFD6428D8B79D00A25072 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5D1EFD6528D8B7C200A25072 /* MenuProfileTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		5D5EFA1128D4A99800D92077 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +120,7 @@
 		5D5EFA1C28D4A99800D92077 /* menuprofile */ = {
 			isa = PBXGroup;
 			children = (
+				5D1EFD6128D8B6E500A25072 /* Cell */,
 				5D1EFD5E28D666E000A25072 /* Section */,
 				5D1EFD5B28D5225F00A25072 /* Screen */,
 				5D1EFD5A28D5221E00A25072 /* VC */,
@@ -284,10 +306,12 @@
 				5D5EFA2228D4A99800D92077 /* MenuProfileVC.swift in Sources */,
 				5D1EFD6028D666F300A25072 /* SectionView.swift in Sources */,
 				5D5EFA1E28D4A99800D92077 /* AppDelegate.swift in Sources */,
+				5D1EFD6328D8B70D00A25072 /* MenuProfileTableViewCell.swift in Sources */,
 				5D5EFA3E28D4B18700D92077 /* GenericService.swift in Sources */,
 				5D5EFA3C28D4B05800D92077 /* MenuProfileService.swift in Sources */,
 				5D5EFA3628D4AE9D00D92077 /* MenuProfile.swift in Sources */,
 				5D5EFA3928D4AFD400D92077 /* MenuProfileViewModel.swift in Sources */,
+				5D1EFD6628D8B7C200A25072 /* MenuProfileTableViewCellScreen.swift in Sources */,
 				5D5EFA2028D4A99800D92077 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
