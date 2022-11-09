@@ -5,4 +5,4 @@
 - Consumir API com Alamofire
 - Estrutura MVVM
 - Implementar testes unitário
-- Go Develop
+- Go Feature
